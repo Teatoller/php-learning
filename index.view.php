@@ -15,9 +15,24 @@
 
 <body>
     <header>
-        <h1>
-            <?= $greeting ?>
-        </h1>
+        <ul>
+
+            <?php
+            foreach ($names as $name) {
+
+                echo "<li>$name</li>";
+            }
+            ?>
+            <hr />
+            <!-- alternative script -->
+            
+            <?php foreach ($names as $name) : ?>
+
+            <li><?= $name; ?></li>
+
+            <?php endforeach; ?>
+
+        </ul>
     </header>
 </body>
 
