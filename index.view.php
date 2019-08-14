@@ -8,7 +8,6 @@
         header {
             background-color: teal;
             padding: 2em;
-            text-align: center;
         }
     </style>
 </head>
@@ -18,17 +17,17 @@
         <ul>
 
             <?php
-            foreach ($names as $name) {
+            foreach ($person as $key => $value) {
 
-                echo "<li>$name</li>";
+                echo "<li>$key => $value</li>";
             }
             ?>
             <hr />
             <!-- alternative script -->
             
-            <?php foreach ($names as $name) : ?>
+            <?php foreach ($person as $feature) : ?>
 
-            <li><?= $name; ?></li>
+            <li><?= $feature; ?></li>
 
             <?php endforeach; ?>
 
