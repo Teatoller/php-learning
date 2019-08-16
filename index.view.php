@@ -14,23 +14,20 @@
 
 <body>
     <header>
+        <h1>Task Assignment</h1>
         <ul>
-
-            <?php
-            foreach ($person as $key => $value) {
-
-                echo "<li>$key => $value</li>";
-            }
-            ?>
-            <hr />
-            <!-- alternative script -->
-            
-            <?php foreach ($person as $feature) : ?>
-
-            <li><?= $feature; ?></li>
-
-            <?php endforeach; ?>
-
+            <li>
+                <strong>Name:</strong> <?= ucfirst($task[('title')]); ?>;
+            </li>
+            <li>
+                <strong>Due Date:</strong> <?= ucfirst($task['due']); ?>;
+            </li>
+            <li>
+                <strong>Accountable:</strong> <?= ucfirst($task['assigned_to']); ?>;
+            </li>
+            <li>
+                <strong>Status:</strong> <?= ucfirst($task['completed'] ? 'complete' : 'incomplete'); ?>
+            </li>
         </ul>
     </header>
 </body>
