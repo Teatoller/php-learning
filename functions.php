@@ -10,14 +10,14 @@
 //     }
 // }
 
-function fetchAllTasks($pdo)
-{
-    $statement = $pdo->prepare('select * from todos');
+// function fetchAllTasks($pdo)
+// {
+//     $statement = $pdo->prepare('select * from todos');
 
-    $statement->execute();
+//     $statement->execute();
 
-    return $statement->fetchAll(PDO::FETCH_CLASS, 'Task');
-}
+//     return $statement->fetchAll(PDO::FETCH_CLASS, 'Task');
+// }
 
 function dd($data)
 {
