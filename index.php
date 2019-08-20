@@ -12,9 +12,31 @@ class Task
     {
         $this->description = $description;
     }
-}
-$task = new Task('Go to the store');
 
-dd($task);
+    public function isComplete()
+    {
+        return $this->completed;
+    }
+
+    public function complete()
+    {
+        $this->completed = true;
+    }
+}
+
+$tasks = [
+    new Task('Go to the store'),
+    new Task('Learn PHP class oop'),
+    new Task('Meet the Sims-lead')
+];
+// $task = new Task('Go to the store');
+
+// $task->complete();
+
+// var_dump($task->isComplete());
+
+dd($tasks);
+
 
 require 'index.view.php';
+?>
