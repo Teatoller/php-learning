@@ -1,12 +1,10 @@
 <?php
-
-require 'functions.php';
 class Task
 {
 
-    protected $description;
+    public $description;
 
-    protected $completed = false;
+    public $completed = false;
 
     public function __construct($description)
     {
@@ -26,17 +24,10 @@ class Task
 
 $tasks = [
     new Task('Go to the store'),
-    new Task('Learn PHP class oop'),
+    new Task('Learn PHP class OOP'),
     new Task('Meet the Sims-lead')
 ];
-// $task = new Task('Go to the store');
 
-// $task->complete();
-
-// var_dump($task->isComplete());
-
-dd($tasks);
-
+$tasks[1]->complete();
 
 require 'index.view.php';
-?>
