@@ -1,33 +1,20 @@
 <?php
-class Task
-{
 
-    public $description;
 
-    public $completed = false;
+try {
+    
+    $pdo = new PDO('mysql:host=127.0.0.1;dbname=mytodo', 'root', 'root');
 
-    public function __construct($description)
-    {
-        $this->description = $description;
-    }
-
-    public function isComplete()
-    {
-        return $this->completed;
-    }
-
-    public function complete()
-    {
-        $this->completed = true;
-    }
+} 
+catch (PDOException $e){
+    echo "Connection failed: " . $e->getMessage();
 }
 
-$tasks = [
-    new Task('Go to the store'),
-    new Task('Learn PHP class OOP'),
-    new Task('Meet the Sims-lead')
-];
+$statement = $pdo->prepare('select * from todos');
 
-$tasks[1]->complete();
+$statement->execute();
+
+$tasks = $statement->fetchAll(PDO::FETCH_OBJ);
 
 require 'index.view.php';
+?>
