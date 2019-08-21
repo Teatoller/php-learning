@@ -2,12 +2,18 @@
 <html lang="en">
 
 <head>
-    <title>Document</title>
     <meta charset="UTF-8">
-
+    <title>Document</title>
 </head>
 
 <body>
+    <nav>
+        <li><a href="views/index.view.php">Home</a></li>
+        <li><a href="views/about.view.php">About Us</a></li>
+        <li><a href="views/contact.view.php">Contact Us</a></li>
+
+    </nav>
+    <h1>My Tasks</h1>
     <ul>
         <?php foreach ($tasks as $task) : ?>
         <li>

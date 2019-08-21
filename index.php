@@ -1,7 +1,7 @@
 <?php
 
-$database = require 'bootstrap.php';
+$database = require 'core/bootstrap.php';
 
 $tasks = $database->selectAll('todos');
 
-require 'index.view.php';
+require 'views/index.view.php';
