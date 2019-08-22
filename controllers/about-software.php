@@ -1,3 +1,5 @@
 <?php
 
-require 'views/about-software.views.php';
+$name = 'Andela';
+
+require 'views/about-software.view.php';
