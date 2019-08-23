@@ -1,5 +1,13 @@
 <?php require('partials/head.php'); ?>
 
+<h1>Submit Your Name</h1>
+
+<form action="/names" method="POST">
+    Name: <input type="text" name="name"><br>
+    <button type="submit">Submit</button>
+</form>
+
+<hr />
 <h1>My Tasks</h1>
 <ul>
     <?php foreach ($tasks as $task) : ?>
