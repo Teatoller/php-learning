@@ -6,6 +6,10 @@
     Name: <input type="text" name="name"><br>
     <button type="submit">Submit</button>
 </form>
+<h2>Output:</h2>
+<?php foreach($users as $user): ?>
+<ul><li><?= $user->name; ?></li></ul>
+<?php endforeach; ?>
 
 <hr />
 <h1>My Tasks</h1>
