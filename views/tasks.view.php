@@ -1,21 +1,18 @@
 <?php require('partials/head.php'); ?>
 
-<h1>Welcome</h1>
-<!-- <h1>Submit Your Name</h1>
-
-<form action="/names" method="POST">
-    Name: <input type="text" name="name"><br>
+<h1>Submit Your Tasks</h1>
+<form action="/tasks" method="POST">
+    Description: <input type="text" name="description" placeholder="Enter description"> <br>
+    Completed: <input type="int" name="completed" placeholder="0"> <br>
+    <pre> Yes: 1, No: 0</pre>
     <button type="submit">Submit</button>
 </form>
-<h2>Output:</h2>
-<?php foreach($users as $user): ?>
-<ul><li><?= $user->name; ?></li></ul>
-<?php endforeach; ?>
 
-<hr />
 <h1>My Tasks</h1>
+
+<h2>Output:</h2>
+<?php foreach ($tasks as $task) : ?>
 <ul>
-    <?php foreach ($tasks as $task) : ?>
     <li>
         <?php if ($task->completed) : ?>
         <strike><?php echo $task->description ?></strike>
@@ -23,7 +20,7 @@
         <?php echo $task->description ?>
         <?php endif; ?>
     </li>
-    <?php endforeach; ?>
-</ul> -->
+</ul>
+<?php endforeach; ?>
 
 <?php require('partials/footer.php'); ?>
