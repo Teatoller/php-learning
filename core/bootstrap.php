@@ -1,5 +1,7 @@
 <?php
 
+use App\Core\App;
+
 App::bind('config', require 'config.php');
 
 App::bind('database', new QueryBuilder(
@@ -15,5 +17,6 @@ function view($name, $data = [])
 function redireect($path)
 {
     // redirect back to all users/todos
+    
     header("Location: /{$path}");
 }

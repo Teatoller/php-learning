@@ -1,5 +1,9 @@
 <?php
 
+namespace App\Controllers;
+
+use App\Core\App;
+
 class TasksController
 {
     public function index()
@@ -7,7 +11,6 @@ class TasksController
         $tasks = App::get('database')->selectAll('todos');
 
         return view('tasks', compact('tasks'));
-
     }
 
     public function store()
@@ -21,5 +24,4 @@ class TasksController
         // redirect back to all users
         return redireect('tasks');
     }
-    
 }
